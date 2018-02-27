@@ -1,0 +1,12 @@
+<h2>FoodName: {{ foodName }}</h2>
+<h2>FoodCal: {{ foodCal }}</h2>
+<label> Name:
+  <input type="text" [(ngModel)]="foodName">
+</label>
+<label> Cal:
+  <input type="text" [(ngModel)]="foodCal">
+</label>
+<button *ngIf="event !== 'Edit'" (click)="onClick('Add')">Add</button>
+<button *ngIf="event === 'Edit'" (click)="onClick('Edit')">Edit</button>
+
+<app-food-detail (selectFoodEvent)="selectFoodEvent($event)" ></app-food-detail>

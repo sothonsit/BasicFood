@@ -1,0 +1,7 @@
+<ul class="heroes">
+  <li *ngFor="let food of foodService.foodList">
+      <span class="badge">{{food.name}}</span> {{food.cal}}
+      <button (click)="onEdit(food)">Edit</button>
+      <button (click)="onDelete(food)">Delete</button>
+  </li>
+</ul>
